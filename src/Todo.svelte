@@ -1,5 +1,5 @@
 <script>
-  export let caption
+  // export let caption
   let isDone = false
   // function check() {
   //   isDone = !isDone
@@ -9,7 +9,7 @@
 </script>
 
 
-<button on:click={() => isDone = !isDone} class={isDone ? 'done' : 'todo'} >{caption}
+<button on:click={() => isDone = !isDone} class={isDone ? 'done' : 'todo'} ><slot />
 </button>
 
 <!-- <button >
@@ -18,10 +18,11 @@
 <style>
   button {
     display: block;
-    margin: 1rem;
+    margin: auto;
+    text-align: center;
     background: white;
     border: none;
-    padding: 0;
+    padding: 0.25rem 1rem;
     font-weight: 400;
   }
   .done {
